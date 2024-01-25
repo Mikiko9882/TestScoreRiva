@@ -1,0 +1,36 @@
+<% content_for(:title, t('.title')) %>
+<div class="container pt-3">
+  <div class="row">
+    <h1 class="mb-4"><%= t '.title' %></h1>
+  </div>
+
+  <article class="card">
+    <div class="card-body">
+      <div class="row">
+      <!-- 左半分の画像 -->
+        <div class="col-md-6">
+          <%= image_tag 'animal_study_buta.png' %>
+        </div>
+        <div class="col-md-6">
+          <h4>このアプリについて</h4>
+          <p>
+            TestScoreRivalsは、テストの点数を管理するアプリ！
+          </p>
+          <p>
+            テストの名前や点数を入れると、達成率が自動で計算されるよ。
+          </p>
+          <p>
+            過去のテストの履歴もグラフで見ることができ、フォローした友達と一緒に競い合える！
+          </p>
+          <p>
+            学びながら楽しく成績を管理しよう！
+          </p>
+          <h4>さっそく始めよう！</h4>
+          <p>
+            <%= link_to '新規登録ページへ', '#' %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
