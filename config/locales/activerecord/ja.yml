@@ -1,0 +1,29 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      test_result: 'テスト結果'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        login_id: 'ログインID'
+        login_identifier: 'ログインIDまたはEメール'
+        last_name: '姓'
+        first_name: '名'
+        nickname: 'ニックネーム'
+        grade_and_class: '学年・クラス'
+        full_name: '氏名'
+        introduction: 'みんなに一言'
+        avatar: 'アバター'
+        role: '権限'
+      test_result:
+        test_name: "テスト名"
+        score: "得点"
+        max_score: "満点"
+    enums:
+      user:
+        role:
+          general: '一般'
+          admin: '管理者'
