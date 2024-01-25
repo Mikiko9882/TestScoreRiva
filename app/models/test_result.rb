@@ -2,8 +2,8 @@ class TestResult < ApplicationRecord
   belongs_to :user
 
   validates :test_name, presence: true, length: { maximum: 255 }
-  validates :score, presence: true # 追加
-  validates :max_score, presence: true # 必要に応じて追加
+  validates :score, presence: true, numericality: { less_than_or_equal_to: :max_score } 
+  validates :max_score, presence: true, numericality: { greater_than_or_equal_to: 0 } 
   
   before_save :calculate_achievement_rate
 
