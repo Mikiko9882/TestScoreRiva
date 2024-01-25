@@ -11,6 +11,7 @@
           <%= render partial: 'test_result', locals: { test_result: test_result } %>
         <% end %>
       </div>
+      <%= paginate @test_results %>
     </div>
   </div>
 </div>
