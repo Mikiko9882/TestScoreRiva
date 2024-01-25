@@ -3,13 +3,13 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">
-          <%= link_to test_result.test_name, test_result_path(test_result) %>
+          <%= link_to test_result.test_name, test_results_path(test_result) %>
         </h4>
-        <%= render 'crud_menus', test_result: test_result if current_user.own?(test_result) %>
+      
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>
-            <%= link_to test_result.user.decorate.full_name, user_path(test_result.user) %>
+            <%= link_to test_result.user.decorate.full_name, users_path(test_result.user) %>
           </li>
           <li class="list-inline-item">
             <%= icon 'far', 'calendar' %>
