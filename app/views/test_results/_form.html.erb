@@ -1,0 +1,17 @@
+<%= form_with model: test_result, local: true do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="form-group">
+    <%= f.label :test_name %>
+    <%= f.text_field :test_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :score %>
+    <%= f.number_field :score, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :max_score %>
+    <%= f.number_field :max_score, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

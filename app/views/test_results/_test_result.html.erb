@@ -1,0 +1,27 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="test_result-id-<%= test_result.id %>">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">
+          <%= link_to test_result.test_name, test_result_path(test_result) %>
+        </h4>
+        <%= render 'crud_menus', test_result: test_result if current_user.own?(test_result) %>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= icon 'far', 'user' %>
+            <%= link_to test_result.user.decorate.full_name, user_path(test_result.user) %>
+          </li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'calendar' %>
+            <%= l test_result.created_at, format: :long %>
+          </li>
+        </ul>
+        <div>
+          <p><strong>点数</strong> <%= test_result.score %></p>
+          <p><strong>満点</strong> <%= test_result.max_score %></p>
+          <p><strong>達成率</strong> <%= test_result.achievement_rate %>%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,11 +17,11 @@
 
         <li class="nav-item dropdown dropdown-slide">
           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= 'テスト' %>
+            <%= TestResult.model_name.human %>
           </a>
 
           <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to t('test_results.index.title'), '#', class: 'dropdown-item' %>
+            <%= link_to t('test_results.index.title'), test_results_path, class: 'dropdown-item' %>
             <%= link_to t('test_results.new.title'), '#', class: 'dropdown-item' %>
           </div>
         </li>

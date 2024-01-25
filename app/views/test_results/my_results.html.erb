@@ -1,0 +1,16 @@
+<% content_for(:title, t('.title')) %>
+<div class="container">
+  <div class="row">
+    <h1><%= t '.title' %></h1>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <% @my_test_results.each do |test_result| %>
+          <%= render partial: 'test_result', locals: { test_result: test_result } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
