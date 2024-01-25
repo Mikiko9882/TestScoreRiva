@@ -35,3 +35,4 @@
 
 # Ignore vendor directory
 /vendor/
+/public/uploads
