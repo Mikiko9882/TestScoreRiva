@@ -1,0 +1,104 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    show: '詳細'
+    edit: '編集'
+    delete: '削除'
+    password_reset: 'パスワードリセット'
+    unspecified: '指定なし'
+    search_word: '検索ワード'
+    message:
+      require_login: 'ログインしてください'
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"
+      deleted: "%{item}を削除しました"
+      delete_confirm: '削除しますか？'
+      not_authorized: '権限がありません'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワードリセット'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'
+  static_pages:
+    top:
+      title: 'TestScoreRivals'
+  users:
+    new:
+      title: '新規登録画面'
+      to_login_page: 'ログインページへ'
+    create:
+      success: '新規登録が完了しました'
+      fail: '新規登録に失敗しました'
+    show:
+      title: 'ユーザー詳細'
+    index:
+      title: 'ユーザー一覧'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
+  test_results:
+    index:
+      title: "テスト結果一覧"
+      test_name: "テスト名"
+      score: "得点"
+      max_score: "満点"
+      achievement_rate: "達成率"
+      percentage_sign: "%"
+    new:
+      title: 'テスト結果入力'
+    show:
+      title: 'テスト詳細'
+      back_to_index: 'テスト一覧画面へ'
+    edit:
+      title: '点数編集'
+    my_results:
+      title: '自分のテスト結果'
+  profiles:
+    show:
+      title: 'プロフィール'
+    edit:
+      title: 'プロフィール編集'
+  terms_of_service:
+    show:
+      title: '利用規約'
+  privacy_policy:
+    show:
+      title: 'プライバシーポリシー'
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+    dashboards:
+      index:
+        title: 'ダッシュボード'
+    users:
+      index:
+        title: 'ユーザー一覧'
+      edit:
+        title: 'ユーザー編集'
+      show:
+        title: 'ユーザー詳細'
+  
+    
