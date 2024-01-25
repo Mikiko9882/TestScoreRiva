@@ -48,6 +48,8 @@ gem 'draper', '3.1.0'
 
 gem 'carrierwave', '2.0.2'
 
+gem 'kaminari', '1.1.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
