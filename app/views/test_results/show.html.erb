@@ -1,0 +1,27 @@
+<% content_for(:title, t('.title')) %>
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <h1><%= t('.title') %></h1>
+      <!-- 掲示板内容 -->
+      <article class="card">
+        <div class="card-body">
+          <div class='row'>
+            <div class='col-md-9'>
+              <h3 class="d-inline"><%= @test_result.test_name%></h3>
+              <%= render 'crud_menus', test_result: @test_result %>
+              <ul class="list-inline">
+                <li class="list-inline-item">by <%= @test_result.user.decorate.full_name %></li>
+                <li class="list-inline-item"><%= l @test_result.created_at, format: :long  %></li>
+              </ul>
+            </div>
+          </div>
+          <p><strong>点数:</strong> <%= @test_result.score %></p>
+          <p><strong>満点:</strong> <%= @test_result.max_score %></p>
+          <p><strong>達成率:</strong> <%= @test_result.achievement_rate %>%</p>
+          <%= link_to t('.back_to_index'), test_results_path, class: 'btn btn-primary' %>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

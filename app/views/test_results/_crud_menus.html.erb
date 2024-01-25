@@ -1,0 +1,14 @@
+<ul class='crud-menu-btn list-inline float-right'>
+  <% if current_user && current_user == test_result.user %>
+    <li class="list-inline-item">
+      <%= link_to edit_test_result_path(test_result), id: "button-edit-#{test_result.id}" do %>
+        <%= icon 'fa', 'pen' %>
+      <% end %>
+    </li>
+    <li class="list-inline-item">
+      <%= link_to test_result_path(test_result), id: "button-delete-#{test_result.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') } do %>
+        <%= icon 'fas', 'trash' %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
