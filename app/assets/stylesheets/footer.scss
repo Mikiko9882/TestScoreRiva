@@ -1,0 +1,22 @@
+footer {
+  margin-top: 20px; /* お好みの余白サイズに調整 */
+  background-color: #f8f9fa; /* フッターの背景色を追加 */
+  padding: 20px; /* フッターの内部余白を追加 */
+  color: #333; /* フッターの文字色を設定 */
+    
+  .copyright {
+    font-size: 14px; /* コピーライトのフォントサイズを設定 */
+  }
+    
+  .footer-links {
+    margin-top: 10px; /* リンクとコピーライトの間の余白を調整 */
+    a {
+      margin-right: 10px; /* 各リンクの右側に余白を追加 */
+      text-decoration: underline; /* リンクの下線を追加 */
+      &:hover {
+        color: #007bff; /* ホバー時のリンクの色を変更 */
+      }
+    }
+  }
+}
+  
