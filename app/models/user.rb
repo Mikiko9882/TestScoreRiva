@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  mount_uploader :avatar, AvatarUploader
 
   has_many :test_results, dependent: :destroy
 
@@ -15,5 +16,9 @@ class User < ApplicationRecord
 
   def own?(object)
     id == object.user_id
+  end
+
+  def full_name
+    "#{last_name} #{first_name}"
   end
 end
