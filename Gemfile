@@ -61,6 +61,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'faker'
+
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do
