@@ -66,6 +66,9 @@ ja:
     show:
       title: 'テスト詳細'
       back_to_index: 'テスト一覧画面へ'
+      score: "得点"
+      max_score: "満点"
+      achievement_rate: "達成率"
     edit:
       title: '点数編集'
     my_results:
@@ -100,5 +103,12 @@ ja:
         title: 'ユーザー編集'
       show:
         title: 'ユーザー詳細'
+    test_results:
+      index:
+        title: 'テスト結果一覧'
+      edit:
+        title: 'テスト結果編集'
+      show:
+        title: 'テスト結果詳細'
   
     

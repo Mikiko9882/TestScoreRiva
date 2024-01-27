@@ -13,13 +13,13 @@
           <td><%= @user.id %></td>
         </tr>
         <tr>
-          <th scope="row"><%= User.human_attribute_name(:role) %></th>
-          <td><%= @user.role_i18n %></td>
-        </tr>
-        <tr>
           <th scope="row"><%= User.human_attribute_name(:full_name) %></th>
           <td><%= @user.decorate.full_name %></td>
         </tr>
+        <tr>
+          <th scope="row"><%= '達成率の平均値'%></th>
+          <td><%= @average_achievement_rate.present? ? number_to_percentage(@average_achievement_rate, precision: 0) : 'N/A' %>
+        <tr>
         <tr>
           <th scope="row"><%= User.human_attribute_name(:avatar) %></th>
           <td><%= image_tag @user.avatar.url %></td>
@@ -29,6 +29,7 @@
           <td><%= l @user.created_at, format: :long %></td>
         </tr>
       </table>
+      <%= line_chart @test_results_data, xtitle: 'テスト名', ytitle: '達成率', height: '400px' %>
     </div>
   </div>
 </div>

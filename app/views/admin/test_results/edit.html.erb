@@ -1,0 +1,24 @@
+<% content_for(:test_name, @test_result.test_name) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1><%= t('.title') %></h1>
+      <%= form_with model: @test_result, url: admin_test_result_path(@test_result), local: true do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <div class="form-group">
+          <%= f.label :test_name %>
+          <%= f.text_field :test_name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :score %>
+          <%= f.number_field :score, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :max_score %>
+          <%= f.number_field :max_score, class: 'form-control' %>
+        </div>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
