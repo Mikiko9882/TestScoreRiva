@@ -1,0 +1,2 @@
+document.getElementById('follow-ajax-<%= @user.id %>').innerHTML = '<%= j(render partial: 'relationships/btn', locals: { user: @user }).html_safe %>';
+document.getElementById('following-count-<%= current_user.id %>').innerHTML = '<%= j(render partial: 'shared/follow_counts', locals: { user: @user }).html_safe %>';

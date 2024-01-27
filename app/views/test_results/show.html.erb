@@ -7,7 +7,7 @@
       <article class="card">
         <div class="card-body">
           <h3 class="d-inline"><%= @test_result.test_name%></h3>
-          <%= render 'crud_menus', test_result: @test_result if current_user.own?(@test_result) %>
+          <%= render 'crud_menus', test_result: @test_result %>
           <ul class="list-inline">
             <li class="list-inline-item">by <%= @test_result.user.decorate.full_name %></li>
             <li class="list-inline-item"><%= l @test_result.created_at, format: :long  %></li>

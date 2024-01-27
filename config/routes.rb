@@ -7,9 +7,18 @@ Rails.application.routes.draw do
   get 'logout', to: 'user_sessions#destroy'
 
   resources :users, only: %i[new create index show] do
+    resource :relationships, only: [:create, :destroy]
+  	  get "followings" => "relationships#followings", as: "followings"
+  	  get "followers" => "relationships#followers", as: "followers"
+    collection do
+      get 'search'
+    end
   end
   
   resources :test_results do
+    collection do
+      get 'my_results'
+    end
   end
 
   resource :profile, only: %i[show edit update] 

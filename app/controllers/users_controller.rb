@@ -28,6 +28,11 @@ class UsersController < ApplicationController
   end
   
   private
+
+  def authorize_user
+    @user = User.find(params[:id])
+    redirect_to(root_path, danger: t('.unauthorized')) unless current_user.follows?(@user)
+  end
   
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation, :last_name, :first_name, :nickname, :grade_and_class)

@@ -1,0 +1,13 @@
+<% if current_user && current_user.id != user.id %>
+  <% if current_user.following?(user) %>
+    <%= form_tag(user_relationships_path(user), method: :delete, remote: true) do %>
+      <%= hidden_field_tag :followed_id, user.id %>
+      <%= submit_tag 'フォロー解除', class: 'btn btn-danger btn-block' %>
+    <% end %>
+  <% else %>
+    <%= form_tag(user_relationships_path(user), remote: true) do %>
+      <%= hidden_field_tag :followed_id, user.id %>
+      <%= submit_tag 'フォローする', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  <% end %>
+<% end %>

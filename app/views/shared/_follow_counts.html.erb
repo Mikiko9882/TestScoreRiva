@@ -1,0 +1,5 @@
+<div class="mr-3">
+  <div id="following-count-<%= current_user.id %>" class="follow-count">
+    <strong>フォロー中:</strong> <%= link_to "#{current_user.followings.count}", user_followings_path(current_user) %>
+  </div>
+</div>

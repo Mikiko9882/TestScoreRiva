@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>フォロワー</h1>
+  <% if @users.exists? %>
+    <%= render "/users/index", users: @users %>
+  <% else %>
+    <p>ユーザーはいません</p>
+  <% end %>
+</div>
