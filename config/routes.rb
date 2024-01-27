@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   get 'logout', to: 'user_sessions#destroy'
   get 'terms_of_service', to: 'terms_of_service#show'
+  get 'privacy_policy', to: 'privacy_policy#show'
 
   resources :users, only: %i[new create index show] do
     resource :relationships, only: [:create, :destroy]
