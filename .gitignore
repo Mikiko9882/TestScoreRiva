@@ -34,5 +34,9 @@
 .DS_Store
 
 # Ignore vendor directory
-/vendor/
+/vendor
 /public/uploads
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
