@@ -3,6 +3,7 @@
     <div class="form-inline align-items-center mx-auto">
       <div class="col-auto">
         <%= f.search_field :first_name_or_last_name_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+        <%= f.select :grade_and_class_cont, grade_and_class_options, { include_blank: '学年と組を選択' }, { class: 'form-control mr-2' } %>
       </div>
       <div class="col-auto">
         <%= f.submit class: 'btn btn-primary' %>

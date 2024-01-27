@@ -25,7 +25,7 @@ ja:
         max_score: "満点"
         achievement_rate: "達成率"
         grade_and_class: "学年とクラス"
-        user: "名前"
+        user: "氏名"
         created_at: "作成日時"
     enums:
       user:
