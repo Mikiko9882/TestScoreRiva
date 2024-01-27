@@ -1,5 +1,7 @@
 {
   "name": "score",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "admin-lte": "^3.0.0"
+  }
 }
