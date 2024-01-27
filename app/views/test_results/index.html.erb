@@ -12,6 +12,7 @@
         <% end %>
       </div>
       <%= paginate @test_results %>
+      <%= column_chart @user_achievements, xtitle: 'ニックネーム', ytitle: '達成率の平均値', library: { animation: { duration: 1000 }, scales: { y: { beginAtZero: true, max: 100 } } } %>
     </div>
   </div>
 </div>
