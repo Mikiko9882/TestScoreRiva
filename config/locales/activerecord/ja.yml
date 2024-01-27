@@ -18,10 +18,15 @@ ja:
         introduction: 'みんなに一言'
         avatar: 'アバター'
         role: '権限'
+        created_at: '作成日時'
       test_result:
         test_name: "テスト名"
         score: "得点"
         max_score: "満点"
+        achievement_rate: "達成率"
+        grade_and_class: "学年とクラス"
+        user: "氏名"
+        created_at: "作成日時"
     enums:
       user:
         role:

@@ -18,7 +18,7 @@
         <%= f.text_field :nickname, class: 'form-control mb-3' %>
 
         <%= f.label :grade_and_class %>
-        <%= f.text_field :grade_and_class, class: 'form-control mb-3' %>
+        <%= f.select :grade_and_class, options_for_select(grade_and_class_options), {}, class: 'form-control' %>
 
         <%= f.label :introduction %>
         <%= f.text_area :introduction, class: 'form-control mb-3' %>

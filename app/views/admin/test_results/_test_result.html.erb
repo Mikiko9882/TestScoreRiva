@@ -1,0 +1,22 @@
+<tr>
+  <td>
+    <%= test_result.id %>
+  </td>
+  <td>
+    <%= link_to test_result.test_name, admin_test_result_path(test_result) %>
+  </td>
+  <td>
+    <%= test_result.user.grade_and_class %>
+  </td>
+  <td>
+    <%= test_result.user.decorate.full_name %>
+  </td>
+  <td>
+    <%= l test_result.created_at, format: :long %>
+  </td>
+  <td>
+    <%= link_to t('defaults.show'), admin_test_result_path(test_result), class: 'btn btn-info' %>
+    <%= link_to t('defaults.edit'), edit_admin_test_result_path(test_result), class: 'btn btn-success' %>
+    <%= link_to t('defaults.delete'), admin_test_result_path(test_result), method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: 'btn btn-danger' %>
+  </td>
+</tr>
