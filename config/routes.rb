@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
+  mount ActionCable.server => '/cable'
+  
   root 'static_pages#top'
 
   get 'login', to: 'user_sessions#new'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'user_sessions#destroy'
   get 'terms_of_service', to: 'terms_of_service#show'
   get 'privacy_policy', to: 'privacy_policy#show'
+  get 'rooms', to: 'rooms#show'
 
   resources :users, only: %i[new create index show] do
     resource :relationships, only: [:create, :destroy]
