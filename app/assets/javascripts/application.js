@@ -10,6 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require cable
+//= require channels/message
+
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
