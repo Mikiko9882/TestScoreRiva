@@ -34,4 +34,6 @@ Rails.application.routes.draw do
     resources :test_results, only: %i[index edit update show destroy]
     resources :users, only: %i[index edit update show destroy]
   end
+
+  resources :notifications, only: :index
 end
