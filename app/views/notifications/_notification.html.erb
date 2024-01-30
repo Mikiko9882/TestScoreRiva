@@ -1,0 +1,23 @@
+<% visitor = notification.visitor %>
+<% visited = notification.visited %>
+<div class="col-md-6 mx-auto">
+  <div class="form-inline">
+    <span>
+      <%= link_to user_path(visitor) do %>
+        <%= image_tag visitor.avatar_url.to_s, class: "icon_mini" %>
+        <strong>
+          <%= visitor.nickname %>
+        </strong>
+      <% end %>
+      さんが
+      <% case notification.action
+         when 'follow' then %>
+        あなたをフォローしました
+      <% end %>
+    </span>
+  </div>
+  <div class="small text-muted text-right">
+    <%= time_ago_in_words(notification.created_at).upcase %>
+  </div>
+  <hr>
+</div>
