@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'logout', to: 'user_sessions#destroy'
   get 'terms_of_service', to: 'terms_of_service#show'
   get 'privacy_policy', to: 'privacy_policy#show'
-  get 'rooms', to: 'rooms#show'
 
   resources :users, only: %i[new create index show] do
     resource :relationships, only: [:create, :destroy]
@@ -39,4 +38,6 @@ Rails.application.routes.draw do
   end
 
   resources :notifications, only: :index
+
+  resources :rooms
 end

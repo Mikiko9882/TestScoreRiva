@@ -110,5 +110,7 @@ ja:
         title: 'テスト結果編集'
       show:
         title: 'テスト結果詳細'
-  
+  rooms:
+    index:
+      title: 'メッセージ一覧'
     
