@@ -30,10 +30,4 @@ class RoomsController < ApplicationController
     @entry2 = Entry.create(params.require(:entry).permit(:user_id, :room_id).merge(:room_id => @room.id))
     redirect_to room_path(@room.id)
   end
-
-  def destroy
-      room = Room.find(params[:id])
-      room.destroy
-      redirect_to users_rooms_path
-  end
 end
