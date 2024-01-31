@@ -30,5 +30,8 @@ module Score
   
     config.time_zone = 'Tokyo'	
     config.active_record.default_timezone = :local
+
+    config.action_cable.mount_path = '/cable'
+    config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
   end
 end
