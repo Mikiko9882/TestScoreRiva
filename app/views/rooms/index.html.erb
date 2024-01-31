@@ -1,0 +1,35 @@
+<% content_for(:title, t('.title')) %>
+<div class="container">
+  <div class="row">
+    <h1><%= t '.title' %></h1>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <% @anotherEntries.each do |e| %>
+          <table class="table table-striped">
+            <tr>
+ 	          <td>
+        <!-- 名前からroomの詳細に飛べるようにリンク化 -->
+	            <%= link_to room_path(e.room.id) do %>
+		          <%= image_tag e.user.avatar.url, class: 'rounded-circle', size: '30x30' %>
+		          <%= e.user.nickname %>
+		        <% end %>
+	          </td>
+	          <td>
+      <!-- 最新メッセージ内容の最初の7文字を表示する -->
+                <% latest_message = e.room.messages.last %>
+		        <% dm = latest_message&.content %>
+		        <%= truncate(dm, length: 10) %>
+	          </td>
+	          <td>
+		        <h6 style="color: #C0C0C0;"><%= e.updated_at.strftime("%Y/%m/%d %H:%M") %></h6>
+	          </td>
+	        </tr>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

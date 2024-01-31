@@ -3,7 +3,9 @@
   <%= render partial: notifications %>
   <%= paginate notifications %>
 <% else %>
-  <p>
-    通知はありません
-  </p>
+<div class="container">
+  <div class="row">
+    <h1>通知はありません</h1>
+  </div>
+</div>
 <% end %>
