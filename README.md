@@ -37,7 +37,9 @@ TestScoreRivalsは、テスト成績を効果的に管理し、ユーザー同�
 * 成績の折れ線グラフ表示
 * フォロー・フォロワー機能
 * 通知
-  WebSocket通信・ActionCable（Rails標準）を使用して、リアルタイムでフォローされた時、テストを更新した時に通知が来るようにします。
+  フォローされた時に通知が来るようにします。
+* チャット機能
+  WebSocket通信・ActionCable（Rails標準）を使用したチャット機能
 * アカウント管理機能
 
 
@@ -59,9 +61,3 @@ TestScoreRivalsは、テスト成績を効果的に管理し、ユーザー同�
 * 通知
   WebSocket通信: リアルタイム通知の実珸にはWebSocket通信を使用します。ActionCableはRails標準の選択肢です。通知は新しいテストスコアがアップロードされたときや順位が更新されたときにユーザーに送信されます。
 * ユーザーとテストの管理機能
-
-### 画面遷移図
-Figma：https://www.figma.com/file/qQLOgYfj9PG0c3Cnufn4ON/Test-Score-Rivals?type=design&node-id=17%3A70&mode=design&t=VEBEYBUYgMSjnQdm-1
-
-### ER図
-https://drive.google.com/file/d/1hOCyvMDnePwkgNdWyrZ4WxjGDAl8t17S/view?usp=sharing
