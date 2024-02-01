@@ -43,3 +43,6 @@ config/environments/*.local.yml
 
 # Ignore database configuration
 /config/database.yml
+
+# Ignore .ruby-version file
+.ruby-version
